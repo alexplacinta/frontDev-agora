@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>View</title>
+    <style>
+        .image{
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="mainFrame" class="mainFrame" style="background-color: antiquewhite; width: 1200px; height: 500px; margin: auto; position: relative;"></div>
+<script src="js/library/jquery.js"></script>
+<script>
+    var content;
+    if (localStorage.getItem("mainFrameContent")) {
+        content = localStorage.getItem("mainFrameContent");
+    } else {
+        content = "";
+    }
+    if (localStorage.getItem("mainFrameSize")) {
+        frameSize = JSON.parse(localStorage.getItem("mainFrameSize"));
+    } else {
+        frameSize = {
+            w: 1200,
+            h: 500
+        }
+    }
+    $("#mainFrame").width(frameSize.w);
+    $("#mainFrame").height(frameSize.h);
+    $("#mainFrame").html(content);
+</script>
+</body>
+</html>

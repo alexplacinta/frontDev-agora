@@ -1,0 +1,124 @@
+html {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+
+    /* No support for these yet, use at own risk */
+    -o-user-select: none;
+    user-select: none;
+}
+body{
+    background: gray;
+}
+/*mainFrame class*/
+.mainFrame {
+    position: relative;
+    margin: auto;
+    width: 1200px;
+    height: 500px;
+    background-color: antiquewhite;
+    /*border: solid 1px gray;*/
+}
+
+/*block Class*/
+.block {
+    position: relative;
+    background-color: lightpink;
+    /*border: solid 1px;*/
+    margin: 0;
+    padding: 0;
+}
+
+/*widget Class*/
+.widget {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: cyan;
+    /*border: solid 1px;*/
+}
+
+.text{
+    border: solid 1px black;
+}
+
+ul.contextMenu {
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: solid gray;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-weight: bold;
+    background-color: beige;
+}
+
+ul.contextMenu li {
+    text-align: center;
+    display: block;
+    /*width: 150px;*/
+    /*height: 30px;*/
+    /*line-height: 200%;*/
+    border: solid 1px;
+}
+
+ul.contextMenu li:hover {
+    background: powderblue;
+    cursor: hand;
+}
+
+.deleteBlock, .deleteWidget {
+    background-color: pink;
+}
+
+ul.contextMenu li.deleteBlock:hover, ul.contextMenu li.deleteWidget:hover {
+    background-color: palevioletred;
+}
+
+.resBar {
+    background: "";
+}
+
+.resBar.lu {
+    cursor: nw-resize;
+}
+
+.resBar.ru {
+    cursor: ne-resize;
+}
+
+.resBar.rd {
+    cursor: se-resize;
+}
+
+.resBar.ld {
+    cursor: sw-resize;
+}
+
+.resBar.u {
+    cursor: n-resize;
+}
+
+.resBar.r {
+    cursor: e-resize;
+}
+
+.resBar.d {
+    cursor: s-resize;
+}
+
+.resBar.l {
+    cursor: w-resize;
+}
+
+#save {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+div.image{
+    background-size: 100% 100%;
+}
